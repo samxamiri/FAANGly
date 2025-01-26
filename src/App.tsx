@@ -1,14 +1,18 @@
 
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Hero from './components/hero'
 import './components/navbar'
-import Navbar from './components/navbar'
+import MyDeck from './pages/myDeck'
+import Home from './pages/home'
+
 function App() {
   return (
-    <>
-    <Navbar />
-    <Hero />
-    </>
+    <div>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path="/myDeck" element={<MyDeck />} />
+      </Routes>
+    </div>
   )
 }
 
